@@ -1,6 +1,6 @@
 import requests
 
-api_key = "be0b4096d39e4267202e3fe4bc9ea197"
+api_key = "ENTER YOUR KEY HERE"
 movie = input("Enter your movie: ")
 if not movie:
     print("You entered nothing")
