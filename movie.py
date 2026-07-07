@@ -1,13 +1,20 @@
 import requests
 
-api_key = "ENTER YOU KEY HERE"
+api_key = "be0b4096d39e4267202e3fe4bc9ea197"
 movie = input("Enter your movie: ")
+if not movie:
+    print("You entered nothing")
+    exit()
 
 url = f"https://api.themoviedb.org/3/search/movie?api_key={api_key}&query={movie}"
 
 response = requests.get(url)
 data = response.json()
 movies = data['results']
+if not data['results']:
+    print("Movie doesnt not exist")
+    exit()
+
 first_movie = movies[0]
 
 title = first_movie['title']
